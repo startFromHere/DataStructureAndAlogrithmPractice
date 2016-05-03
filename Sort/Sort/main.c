@@ -14,9 +14,9 @@ void stackSequenceAndLinklist();
 int main(int argc, const char *argv[]) {
     // insert code here...
     printf("Hello, World!\n");
-    
 
-    stackSequenceAndLinklist();
+//    stackSequenceAndLinklist();
+    sort();
     return 0;
 }
 
@@ -50,5 +50,16 @@ void sort() {
      *  快速排序
      */
     //quickSort(sourceArr, arrayLength);
+    
+    
+    /**
+     *  归并排序
+     */
+    mergeSort(sourceArr, arrayLength);
+    
+    for (int i=0; i<10; i++) {
+        printf("\n%d",sourceArr[i]);
+    }
+    
 }
 

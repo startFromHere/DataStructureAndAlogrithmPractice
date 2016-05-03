@@ -10,34 +10,31 @@
 
 void sortByIndexs(int array[], int smallIndex, int bigIndex);
 
-void quickSort(int array[], int length){
-    int startIndex = 0;
-    int endIndex = length-1;
-    sortByIndexs(array, startIndex, endIndex);
-}
+void quickSort(int arr[], int length){
+    if (length>1) {
+        int endIndex = length-1;
+        int startIndex = 0;
+        int tempValue = arr[0];
+        
+        while (startIndex < endIndex) {
+            tempValue = arr[startIndex];
+            while (arr[endIndex] < tempValue) {
+                endIndex--;
+            }
+            
+            while (arr[startIndex] > tempValue) {
+                startIndex++;
+            }
+            
+            printf("startIndex:%d  endIndex:%d  ",startIndex,endIndex);
+            
+            arr[startIndex] = arr[endIndex];
+            arr[endIndex] = tempValue;
+        }
+        
+        
+        quickSort(arr, startIndex);
+        quickSort(arr+startIndex+1, length-startIndex-1);
+    }
 
-void sortByIndexs(int array[], int smallIndex, int bigIndex){
-    if (smallIndex>=bigIndex) {
-        return;
-    }
-    int endIndex = bigIndex;
-    int startIndex = smallIndex;
-    int referenceValue = array[startIndex];
-    
-    while (smallIndex < bigIndex) {
-        while (array[bigIndex]>referenceValue) {
-            bigIndex--;
-        }
-        while (array[smallIndex]<referenceValue) {
-            smallIndex++;
-        }
-        
-        swap(&array[smallIndex], &array[bigIndex]);
-    }
-    if (array[startIndex]<array[smallIndex]) {
-        swap(&array[smallIndex], &array[smallIndex]);
-        
-        sortByIndexs(array, startIndex, smallIndex);
-        sortByIndexs(array, smallIndex, endIndex);
-    }
 }

@@ -13,6 +13,7 @@
 		CF5CA7CF1C30F469003220BF /* swapUtil.c in Sources */ = {isa = PBXBuildFile; fileRef = CF5CA7CB1C30F469003220BF /* swapUtil.c */; };
 		CF5CA7D21C30F682003220BF /* insertSort.c in Sources */ = {isa = PBXBuildFile; fileRef = CF5CA7D01C30F682003220BF /* insertSort.c */; };
 		CF5CA7D51C30FD8A003220BF /* quickSort.c in Sources */ = {isa = PBXBuildFile; fileRef = CF5CA7D31C30FD8A003220BF /* quickSort.c */; };
+		CFFE6D2B1CC7885A00B0BD90 /* mergeSort.c in Sources */ = {isa = PBXBuildFile; fileRef = CFFE6D291CC7885A00B0BD90 /* mergeSort.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,8 @@
 		CF5CA7D11C30F682003220BF /* insertSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = insertSort.h; sourceTree = "<group>"; };
 		CF5CA7D31C30FD8A003220BF /* quickSort.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = quickSort.c; sourceTree = "<group>"; };
 		CF5CA7D41C30FD8A003220BF /* quickSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = quickSort.h; sourceTree = "<group>"; };
+		CFFE6D291CC7885A00B0BD90 /* mergeSort.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mergeSort.c; sourceTree = "<group>"; };
+		CFFE6D2A1CC7885A00B0BD90 /* mergeSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mergeSort.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 				CF5CA7D11C30F682003220BF /* insertSort.h */,
 				CF5CA7D31C30FD8A003220BF /* quickSort.c */,
 				CF5CA7D41C30FD8A003220BF /* quickSort.h */,
+				CFFE6D291CC7885A00B0BD90 /* mergeSort.c */,
+				CFFE6D2A1CC7885A00B0BD90 /* mergeSort.h */,
 			);
 			name = sortMethods;
 			path = methods;
@@ -173,6 +178,7 @@
 			files = (
 				CF5CA7CE1C30F469003220BF /* selectSort.c in Sources */,
 				CF5CA7D21C30F682003220BF /* insertSort.c in Sources */,
+				CFFE6D2B1CC7885A00B0BD90 /* mergeSort.c in Sources */,
 				CF5CA7AC1C30D795003220BF /* main.c in Sources */,
 				CF5CA7CF1C30F469003220BF /* swapUtil.c in Sources */,
 				CF5CA7CD1C30F469003220BF /* bubbleSort.c in Sources */,

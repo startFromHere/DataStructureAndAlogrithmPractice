@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "EB1074A4298BBC6ED3ACDD523CCC5D75BF449069",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "EB1074A4298BBC6ED3ACDD523CCC5D75BF449069" : 0,
+    "D19B840C930FD0B358B6F8E5BDFA4354B09241E6" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5D7B3E75-8899-4A57-B849-9B2DB70E9DAD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "EB1074A4298BBC6ED3ACDD523CCC5D75BF449069" : "DataStructureAndAlgorithm\/",
+    "D19B840C930FD0B358B6F8E5BDFA4354B09241E6" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Sort",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Sort\/Sort.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/startFromHere\/Practices.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D19B840C930FD0B358B6F8E5BDFA4354B09241E6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/startFromHere\/DataStructureAndAlogrithmPractice.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EB1074A4298BBC6ED3ACDD523CCC5D75BF449069"
+    }
+  ]
+}
