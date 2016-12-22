@@ -5,7 +5,7 @@
 //  Created by 移动支付－刘涛 on 11/28/16.
 //  Copyright © 2016 移动支付－刘涛. All rights reserved.
 //
-/*
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -23,31 +23,32 @@ typedef struct tree{
     int size;
 }Tree;
 
-void insertANodeIntoTree(Node *newNode,Node *exitNode){
-    if (strcmp(exitNode->value, "") == 0) {
-        exitNode = newNode;
-        printf("newNode:%s   exitNode:%s\n",newNode->value,exitNode->value);
+void insertANodeIntoTree(Node *newNode,Node *existNode){
+    if (atoi(existNode->value) == atoi(newNode->value)) {
+        (existNode->repeatTimes)++;
         return;
-    }
-//    if (exitNode == NULL) {
-//        exitNode = newNode;
-//        return;
-//    }
-    if (atoi(exitNode->value) == atoi(newNode->value)) {
-        (exitNode->repeatTimes)++;
-        return;
-    } else if (atoi(exitNode->value) >atoi(newNode->value)) {
-        insertANodeIntoTree(newNode, exitNode->lchild);
+    } else if (atoi(existNode->value) >atoi(newNode->value)) {
+        if (existNode->lchild == NULL) {
+            existNode->lchild = newNode;
+        } else {
+            insertANodeIntoTree(newNode, existNode->lchild);
+        }
     } else {
-        insertANodeIntoTree(newNode, exitNode->rchild);
+        if (existNode->rchild == NULL) {
+            existNode->rchild = newNode;
+        } else {
+            insertANodeIntoTree(newNode, existNode->rchild);
+        }
     }
 }
 
 void showTree(Node *node){
-    //序遍历
-    if (node->lchild == NULL && node->rchild == NULL){
+    //前序遍历
+    /*
+    if (node == NULL) {
         return;
-    } else {
+    }
+    for (int i=0; i<node->repeatTimes; i++) {
         printf("%s   ",node->value);
     }
     
@@ -57,16 +58,41 @@ void showTree(Node *node){
     if (node->rchild != NULL) {
         showTree(node->rchild);
     }
+     */
+    /*
+    //中序遍历
+    if(node->lchild){
+        showTree(node->lchild);
+    }
+    for (int i=0; i<node->repeatTimes; i++) {
+        printf("%s   ",node->value);
+    }
+    if (node->rchild) {
+        showTree(node->rchild);
+    }
+    */
+    
+    //后序遍历
+    if(node->rchild){
+        showTree(node->rchild);
+    }
+    if (node->lchild) {
+     showTree(node->lchild);
+    }
+    for (int i=0; i<node->repeatTimes; i++) {
+        printf("%s   ",node->value);
+    }
 }
 
 int main(int argc, const char * argv[]) {
     Tree *myTree;
     Node *currentNode = malloc(sizeof(Node));
+    currentNode->repeatTimes = 1;
+    currentNode->lchild = NULL;
+    currentNode->rchild = NULL;
     
     puts("Please input the root value:\n");
-    while (gets(currentNode->value) != NULL && currentNode->value[0] != '\0') {
-        currentNode->lchild = (Node *)malloc(sizeof(Node));
-        currentNode->rchild = (Node *)malloc(sizeof(Node));
+    while (gets(currentNode->value) != NULL && currentNode->value[0] != '\0' &&currentNode->value[0] != '\n') {
         if (myTree == NULL) {
             myTree = malloc(sizeof(Tree));
             myTree->root = currentNode;
@@ -74,14 +100,17 @@ int main(int argc, const char * argv[]) {
             insertANodeIntoTree(currentNode, myTree->root);
         }
         currentNode = malloc(sizeof(Node));
+        currentNode->repeatTimes = 1;
+        currentNode->lchild = NULL;
+        currentNode->rchild = NULL;
     }
     
     showTree(myTree->root);
     
     return 0;
 }
-*/
 
+/*
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -240,7 +269,7 @@ void uppercase (char * str){
     }
 }
 
-
+*/
 
 
 
